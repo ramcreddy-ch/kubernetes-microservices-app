@@ -1,8 +1,23 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.db
+*.log
+
+# Dependencies
 node_modules/
+vendor/
+.venv/
 __pycache__/
-*.pyc
-.DS_Store
-.idea/
+*.egg-info/
+
+# IDEs
 .vscode/
-build/
-dist/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+replicaCount: 3
+
+image:
+  repository: ramcreddy/microservice
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+    - host: my-app.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
